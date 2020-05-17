@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <!--  Include Font Awesome file here -->
+    <!--  Include Google Fonts file here -->
+
+    <link href="https://fonts.googleapis.com/css?family=Montez&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <link rel="stylesheet" type="text/css" media="screen" href="../styles/postslist.css">
+    
+    <!-- jquery cdn -->
+
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"
+        integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+    
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+    <script src="../scripts/index.js"></script>
+</head>
+
+<body>
+
+    <!-- header of a body -->
+
+    <header>
+        <div style="float:left">
+            <span style="font-family: 'Montez', cursive;">ScriBBler</span>
+            <div style="color: #000; font-size:12px;">
+                Explore, Imagine, Create
+            </div>
+        </div>
+        <div style="float:right">
+            
+<!-- Sign Up and Sign in -->
+            
+            <button type="button" class="signUp" data-toggle="modal" data-target="#exampleModal">
+                Sign Up
+            </button>
+    
+            <button type="button" class="signUp" data-toggle="modal" data-target="#exampleModal1">
+                Sign in
+            </button>
+        </div>
+        <div style="clear: both;"></div>
+    </header>
+
+    <!-- Modal Sign Up-->
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered col-10" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Get Started</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="txtname">Name</label>
+                            <input type="text" class="form-control" id="txtname" aria-describedby="emailHelp"
+                                placeholder="Enter your name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="txtusername">Username</label>
+                            <input type="text" class="form-control" id="txtusername" aria-describedby="emailHelp"
+                                placeholder="Enter your username" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="txtpass">Password</label>
+                            <input type="password" class="form-control" id="txtpass" placeholder="Enter your password"
+                                required>
+                        </div>
+                        <div class="form-group">
+                            <label for="txtconfirmpass">Confirm Password</label>
+                            <input type="password" class="form-control" id="txtconfirmpass"
+                                placeholder="Re-enter your password" required>
+                        </div>
+                        <button type="submit" class="btn btn-success w-100">Sign Up</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Modal Sign In-->
+
+    <div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered col-10" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Welcome Back!</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="txtusername">Username</label>
+                            <input type="text" class="form-control" id="txtusername" aria-describedby="emailHelp"
+                                placeholder="Enter your username" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="txtpass">Password</label>
+                            <input type="password" class="form-control" id="txtpass" placeholder="Enter your password"
+                                required>
+                        </div>
+                        <button type="submit" class="btn btn-success w-100">Sign In</button>
+                        <div class="modal-footer" style="justify-content: center;">
+                            <div class="options text-center text-md-right mt-1">
+                                <p>Not a member? <a href="#" data-toggle="modal" data-target="#exampleModal"
+                                        data-dismiss="modal" class="blue-text">Sign Up</a></p>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- list of all posts starts here -->
+    <!-- Card 1 -->
+<div class="postCardCon">
+    <input type="hidden" id="hiddenInput">
+
+    <div class="postCard" id="card1">
+        <div class="postCardName">
+            <p>Shristi Gupta</p>
+        </div>
+        <div class="postCardContent">
+            <div>
+                <p style="float:left;">Blue Color</p>
+                <span style="float:right;">
+    
+                    <!--Include Font Awesome icon for delete icon here -->
+    
+                    <a href="#" data-toggle="modal" data-target="#modalNew" style="color: #696969;" onclick="deletePost('card1');">
+                        <i class="fa fa-trash"></i>
+                    </a>
+                </span>
+            </div>
+            <p style="float: left;">
+                This color is one of trust, responsibility, honesty and loyalty.
+                 It is sincere, reserved and quiet, and doesn't like to make a fuss or draw attention. 
+                 It hates confrontation, and likes to do things in its own way.
+                From a color psychology perspective, blue is reliable and responsible.
+                This color exhibits an inner security and confidence.
+            </p>
+            <span style="float:right;">
+    
+                <!-- Include Font Awesome icon for horizontal ellipsis icon here -->
+    
+                <a href="post.html">
+                    <i class="fa fa-ellipsis-h" style="color: #696969;"></i>
+                </a>
+            </span>
+        </div>
+    </div>
+
+        <!-- Card 2 -->
+
+        <div class="postCard" id="card2">
+            <div class="postCardName">
+                <p>Shristi Gupta</p>
+            </div>
+            <div class="postCardContent">
+                <div>
+                    <p style="float:left;">Green Color</p>
+                    <span style="float:right;">
+
+                        <!--Include Font Awesome icon for delete icon here -->
+
+                        <a href="#" data-toggle="modal" data-target="#modalNew" style="color: #696969;" onclick="deletePost('card2');">
+                        <i class="fa fa-trash"></i>
+                        </a>
+                    </span>
+                </div>
+                <p style="float: left;">
+                    From a meaning of colors perspective, green is also the color of growth, 
+                    the color of spring, of renewal and rebirth. It renews and restores depleted energy.
+                     It is the sanctuary away from the stresses of modern living, restoring us back to a sense of well being.
+                      This is why there is so much of this relaxing color on the earth, and why we need to keep it that way.
+                </p>
+                <span style="float:right;">
+
+                    <!-- Include Font Awesome icon for horizontal ellipsis icon here -->
+
+                    <a href="post.html">
+                    <i class="fa fa-ellipsis-h" style="color: #696969;"></i>
+                    </a>
+                </span>
+            </div>
+        </div>
+
+        <!-- Card 3 -->
+
+        <div class="postCard" id="card3">
+            <div class="postCardName">
+                <p>Neha Vashist</p>
+            </div>
+            <div class="postCardContent">
+                <div>
+                    <p style="float:left;">Yellow Color</p>
+                    <span style="float:right;">
+
+                        <!-- Include Font Awesome icon for delete icon here -->
+
+                        <a href="#" data-toggle="modal" data-target="#modalNew" style="color: #696969;" onclick="deletePost('card3');">
+                            <i class="fa fa-trash"></i>
+                        </a>
+                    </span>
+                </div>
+                <p style="float: left;">The color yellow relates to acquired knowledge. 
+                    It is the color which resonates with the left or logic side of the brain stimulating our mental faculties and creating mental agility and perception.
+
+                    Being the lightest hue of the spectrum, the color psychology of yellow is uplifting and illuminating, offering hope, happiness, cheerfulness and fun.
+                    
+                    In the meaning of colors, yellow inspires original thought and inquisitiveness.
+                </p>
+                <span style="float:right;">
+
+                    <!-- Include Font Awesome icon for horizontal ellipsis icon here -->
+
+                    <a href="post.html">
+                    <i class="fa fa-ellipsis-h" style="color: #696969;"></i>
+                    </a>
+                </span>
+            </div>
+        </div>
+
+        <!-- Card 4 -->
+
+        <div class="postCard" id="card4">
+            <div class="postCardName">
+                <p>Akash Gupta</p>
+            </div>
+            <div class="postCardContent">
+                <div>
+                    <p style="float:left;">Orange Color</p>
+                    <span style="float:right;">
+
+                        <!-- Include Font Awesome icon for delete icon here -->
+
+                        <a href="#" data-toggle="modal" data-target="#modalNew" style="color: #696969;" onclick="deletePost('card4');">
+                            <i class="fa fa-trash"></i>
+                        </a>
+                    </span>
+                </div>
+                <p style="float: left;"> The color orange radiates warmth and happiness, combining the physical energy and stimulation of red with the cheerfulness of yellow.
+
+                    Orange relates to 'gut reaction' or our gut instincts, as opposed to the physical reaction of red or the mental reaction of yellow.
+                    
+                    Orange offers emotional strength in difficult times. It helps us to bounce back from disappointments and despair, assisting in recovery from grief.
+                </p>
+                <span style="float:right;">
+
+                    <!-- Include Font Awesome icon for horizontal ellipsis icon here -->
+
+                    <a href="post.html">
+                    <i class="fa fa-ellipsis-h" style="color: #696969;"></i>
+                    </a>
+                </span>
+            </div>
+        </div>
+
+        <!-- Card 5 -->
+
+        <div class="postCard" id="card5">
+            <div class="postCardName">
+                <p>Rahul Singh</p>
+            </div>
+            <div class="postCardContent">
+                <div>
+                    <p style="float:left;">Red Color</p>
+                    <span style="float:right;">
+
+                        <!-- Include Font Awesome icon for delete icon here -->
+
+                        <a href="#" data-toggle="modal" data-target="#modalNew" style="color: #696969;" onclick="deletePost('card5');">
+                            <i class="fa fa-trash"></i>
+                        </a>
+                    </span>
+                </div>
+                <p style="float: left;">The color red is a warm and positive color associated with our most physical needs and our will to survive.
+                     It exudes a strong and powerful masculine energy.
+
+                    Red is energizing. It excites the emotions and motivates us to take action.
+                    It signifies a pioneering spirit and leadership qualities, promoting ambition and determination.
+                    It is also strong-willed and can give confidence to those who are shy or lacking in will power.
+                </p>
+                <span style="float:right;">
+
+                    <!-- Include Font Awesome icon for horizontal ellipsis icon here -->
+
+                    <a href="post.html">
+                    <i class="fa fa-ellipsis-h" style="color: #696969;"></i>
+                </a>
+                </span>
+            </div>
+        </div>
+    </div>
+    </div>
+    <!-- Modal -->
+
+    <div class="modal fade" id="modalNew" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                
+                <div class="modal-body">
+                    <div style="margin-bottom: 20px; text-align: center;">
+                        Are you sure want to delete this post?
+                    </div>
+                    <a href="#" onclick="deletePostModal();">
+                        <button class="btn btn-success" style="float: left;" data-dismiss="modal">Yes</button>
+                    </a>
+                    <button class="btn btn-danger" style="float: right;" data-dismiss="modal">No</button>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <!-- list of all posts ends here -->
+
+    <script src="../scripts/postslist.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,76 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+   /* background-image: url("../images/background.jpg");
+    background-repeat: no-repeat;
+    /* width: 100%; */
+   /* background-attachment: fixed;
+    background-size: cover; */
+    background-color: #ffeedd;
+ }
+
+header{
+    color:blue;
+    font-size: 25px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.signUp{
+    background-color: blue;
+    margin-top: 8px;
+    color: white;
+    font-size: 15px;
+    padding: 8px;
+    width: 100px;
+    margin-left: 5px;
+}
+
+.postCardCon{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-top: 50px;
+}
+
+.postCard{
+    border: 2px  #000;
+    box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.75);
+    border-radius: 8px;
+    width: 40%;
+    /* margin: 40px; */
+    margin-left: 40px;
+    margin-right: 40px;
+    /* padding-left: 5px; */
+    /* padding-right: 5px; */
+    display: flex;
+    margin-bottom: 40px;
+}
+
+.postCard:hover{
+    box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.75);
+}
+
+.postCardName{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width: 15%;
+    padding: 10px;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 8px;
+}
+
+.postCardContent{
+    float:left;
+    width: 85%;
+    background-color: #e8e8e8;
+    border-radius: 8px;
+    padding: 10px;
+}

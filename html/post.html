@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Montez&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="../styles/post.css">
+
+    <!-- jquery cdn -->
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+    
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <script src="../scripts/post.js"></script>
+</head>
+<body>
+
+    <!-- Header of a page -->
+
+    <header>
+        <div style="float:left">
+            <span style="font-family: 'Montez', cursive;">ScriBBler</span>
+            <div style="color: #000; font-size:12px;">
+                Explore, Imagine, Create
+            </div>
+        </div>
+
+<!-- Sign Up and Sign in button -->
+
+        <div style="float:right">
+                <button type="button" class="signUp" data-toggle="modal" data-target="#exampleModal">
+                    Sign Up
+                </button>
+
+                <button type="button" class="signUp" data-toggle="modal" data-target="#exampleModal1">
+                    Sign in
+                </button>
+        </div>
+        <div style="clear: both;"></div>
+    </header>
+
+    
+    <!-- Modal Sign Up-->
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered col-10" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Get Started</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="txtname">Name</label>
+                            <input type="text" class="form-control" id="txtname" aria-describedby="emailHelp" placeholder="Enter your name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="txtusername">Username</label>
+                            <input type="text" class="form-control" id="txtusername" aria-describedby="emailHelp" placeholder="Enter your username" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="txtpass">Password</label>
+                            <input type="password" class="form-control" id="txtpass" placeholder="Enter your password" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="txtconfirmpass">Confirm Password</label>
+                            <input type="password" class="form-control" id="txtconfirmpass" placeholder="Re-enter your password" required>
+                        </div>
+                        <button type="submit" class="btn btn-success w-100">Sign Up</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Modal Sign In-->
+
+ <div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+ aria-hidden="true">
+ <div class="modal-dialog modal-dialog-centered col-10" role="document">
+     <div class="modal-content">
+         <div class="modal-header">
+             <h5 class="modal-title" id="exampleModalLabel">Welcome Back!</h5>
+             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                 <span aria-hidden="true">&times;</span>
+             </button>
+         </div>
+         <div class="modal-body">
+             <form>
+                 <div class="form-group">
+                     <label for="txtusername">Username</label>
+                     <input type="text" class="form-control" id="txtusername" aria-describedby="emailHelp" placeholder="Enter your username" required>
+                 </div>
+                 <div class="form-group">
+                     <label for="txtpass">Password</label>
+                     <input type="password" class="form-control" id="txtpass" placeholder="Enter your password" required>
+                 </div>
+                 <button type="submit" class="btn btn-success w-100">Sign In</button>
+                 <div class="modal-footer" style="justify-content: center;">
+                    <div class="options text-center text-md-right mt-1">
+                      <p>Not a member? <a href="#" data-toggle="modal" data-target="#exampleModal" data-dismiss="modal" class="blue-text">Sign Up</a></p>
+                    </div>
+                  </div>
+             </form>
+         </div>
+     </div>
+ </div>
+</div>
+
+<!-- Heading -->
+
+<div class="heading">
+        <input type="text" class="headingInput" id="headingInput" value="Everything you should know about 'module' and 'require' in Node.js" disabled />
+    </div>
+
+<!-- edit and save button -->
+
+    <div style="margin-bottom: 10px; margin-left: 50px;">
+
+<!-- author name -->
+
+        <input type="text" class="authorInput" id="authorInput" value="Vedank Mishra" disabled />
+            <button type="button" id="btnEdit" class="edit" onclick="edit();">
+                Edit <i class="fa fa-edit"></i>
+            </button>
+            <button type="button" id="btnSave" class="edit" onclick="save();" style="display:none;">
+                Save <i class="fa fa-save"></i>
+            </button>        
+</div>
+<br>
+
+<!-- content of a post -->
+
+<div class="content">
+    <textarea name="" id="contentInput" cols="180" rows="11" disabled>The killing of over 40 Central Reserve Police Force (CRPF) personnel on 14 February by a Kashmiri youth who was a member of Pakistan-based Islamist militant group Jaish-e-Mohammad, has renewed demand for the repealing of Article 370 in the Constitution of India, which accords special status to the state of Jammu and Kashmir. But repealing Article 370 may not be as easy as being portrayed, especially since it's linked to the Instrument of Accession under which its ruler Maharaja Hari Singh had agreed to accede Jammu and Kashmir with India. Here's why: With the end of British Rule and India gaining independence on 15 August, 1947, Jammu and Kashmir along with other princely states became independent as well. Initially, Jammu and Kashmir ruler Hari Singh decided not to join either India or Pakistan and chose to remain independent. However, on 22 October, 1947, thousands of armed men backed by Pakistan’s army attacked the state from the north forcing Singh to seek help from the Indian state and deciding to accede to it. This led to the signing of the ‘instrument of accession’ between Singh and then prime minister Jawaharlal Nehru on 26 October, 1947. It was accepted by the then Governor General of India Lord Mountbatten on 27 October. This accession was legally valid as the Indian Independence Act of 1947, which was signed by both India and Pakistan, gave sovereignty of the state to Maharaja Hari Singh after the lapse of British paramountcy and Singh could make his sovereign decisions. The US representative Warren Austin seconded this view in the Security Council where he said that with the accession of Jammu and Kashmir to India, this foreign sovereignty went over to India. Under this instrument of accession, Jammu and Kashmir surrendered only three subjects, which was defense, external affairs and communications to the Indian state and earned an assurance from India that the people of Jammu and Kashmir through their own constituent Assembly would draft their own constitution.</textarea>
+</div>
+
+<!-- like button -->
+
+<div class="like">  
+        <button id="likeBlog" onclick="addLike();"><i class="fa fa-thumbs-up"></i>&nbsp;Like</button>
+</div>
+<div class="likeText text-muted" id="likeText">
+        Be the first one to like this!
+</div>
+
+<!-- comment block -->
+
+<div class="commentArea">
+    <textarea id="textArea" name="" cols="100" rows="3" placeholder="Leave a comment..."></textarea>
+    <div>
+
+<!-- comment button -->
+
+        <button class="btnComment" onclick="addComment();">Comment</button>
+    </div>
+    <div id="addCmnt"></div>
+</div>
+</body>
+</html>

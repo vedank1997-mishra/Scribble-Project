@@ -1,0 +1,52 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    background-image: url("../images/background.jpg");
+    background-repeat: no-repeat;
+    /* width: 100%; */
+    background-attachment: fixed;
+    background-size: cover;
+ }
+
+header{
+    color:blue;
+    font-size: 25px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.signUp{
+    background-color: blue;
+    margin-top: 8px;
+    color: white;
+    font-size: 15px;
+    padding: 8px;
+    width: 100px;
+    margin-left: 5px;
+}
+
+.createPost{
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    top: 40%;
+    bottom: 50%;
+    width:100%;
+}
+
+.postBtn{
+    background-color:yellow;
+    width: 130px;
+    height: 50px;
+    margin: 10px;
+} 
+
+.abc{
+    max-width: 90% !important ;
+    max-height: 90% !important;
+}
+
+.modal-content-custom{
+    height: 85% !important;
+}
